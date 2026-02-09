@@ -26,14 +26,12 @@ export function PhotoGallery() {
         const content = (
           <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-rose-gold/20 hover:border-rose-gold/40 transition-all duration-300 hover:shadow-xl hover:shadow-rose-gold/10">
             <AspectRatio ratio={4/3}>
-              <div className="w-full h-full bg-gradient-to-br from-blush to-cream-dark flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-romantic-gradient opacity-50" />
-                <div className="relative z-10 text-center p-4">
-                  <Camera size={48} className="mx-auto mb-2 text-rose-gold/50" />
-                  <p className="text-sm text-muted-foreground font-body italic">
-                    Add your photo here
-                  </p>
-                </div>
+              <div className="w-full h-full relative overflow-hidden">
+                <img 
+                  src={`/photo-${photo.id}.jpg.jpeg`}
+                  alt={photo.caption}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-burgundy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </AspectRatio>
